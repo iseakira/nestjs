@@ -62,4 +62,9 @@ export class ProductsController {
   ): string {
     return `limit:${limit},offset:${offset}の商品を取得`;
   }
+
+  @Get('search')
+  search(@Query() query: any): string {
+    return `クエリ : ${JSON.stringify(query)}で検索`;
+  }
 }
